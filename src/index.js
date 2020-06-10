@@ -1,14 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+// 兼容IE
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+import * as serviceWorker from './serviceWorker';
+import '@/scss/reset.scss';
+import React from 'react';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import App from './App';
+import configureStore from '@/store';
+const store = configureStore();
+render(
+    <Provider store={store}>
+        <App/>
+    </Provider>,
+    document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change
