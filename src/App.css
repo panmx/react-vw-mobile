@@ -1,7 +1,0 @@
-html, head, body{
-  font-family: PingFangSC-Regular, Arial, "Microsoft Yahei", "Helvetica Neue", Helvetica, sans-serif;
-  color: #333;
-}
-img {
-  content: normal !important; /*vw布局 img属性会默认加上content，解决IOS上图片不显示bug*/
-}
